@@ -4,6 +4,6 @@
 
    RewriteCond %{REQUEST_FILENAME}  -f [OR]
    RewriteCond %{REQUEST_FILENAME} !-f
-   RewriteRule ^(.*)$ index.php [L,QSA]
+   RewriteRule ^(.*)$ __index.php [L,QSA]
 
 </IfModule>
