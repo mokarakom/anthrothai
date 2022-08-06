@@ -1,5 +1,5 @@
         <div class="col-12 d-print-none"><hr /></div>
-        <div class="col-12 d-print-none"><p><small>©2021 - <a href="index.html">thai.anthro.asia</a> is a homepage of <a href="about.html">แอนโทรไทย</a></small><div class="d-none"> | <small>sitemap: <a href="sitemap.html">html</a>,<a href="sitemap.xml">xml</a></small></div></div>
+        <div class="col-12 d-print-none"><p><small>©2021 - <a href="https://thai.anthro.asia">thai.anthro.asia</a> is a homepage of <a href="about.html">แอนโทรไทย</a></small><div class="d-none"> | <small>sitemap: <a href="sitemap.html">html</a>,<a href="sitemap.xml">xml</a></small></div></div>
     </div>
 </div>
 

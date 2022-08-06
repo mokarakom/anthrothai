@@ -28,32 +28,45 @@
                 aria-controls='navbarCollapse' aria-expanded='false' aria-label='Toggle navigation'>
             <span class='navbar-toggler-icon'></span>
         </button>
+        <?php
+        if(!isset($menu)){
+          $menu = "home";
+        }
+        ?>
         <div class='collapse navbar-collapse' id='navbarCollapse'>
             <ul class='navbar-nav mr-auto'>
-                <li class='nav-item active'>
+                <li class='nav-item <?php if($menu == "home"){ echo "active"; } ?>'>
                     <a class='nav-link' href='<?php echo $url; ?>'>หน้าแรก</a>
                 </li>
 
-                <li class='nav-item '>
-                    <a class='nav-link' href='<?php echo $url; ?>/about'>เกี่ยวกับ</a>
+                <li class='nav-item <?php if($menu == "about"){ echo "active"; } ?>'>
+                    <a class='nav-link' href='<?php echo $url; ?>/about.html'>เกี่ยวกับ</a>
                 </li>
 
-                <li class='nav-item '>
-                    <a class='nav-link' href='<?php echo $url; ?>/user'>สมาชิก (บุคคลทั่วไป)</a>
+                <?php
+                if(isset($_SESSION['userName'])){
+                    $username = $_SESSION['userName'];
+                }else{
+                    $username = "บุคคลทั่วไป";
+                }
+
+                ?>
+                <li class='nav-item <?php if($menu == "user"){ echo "active"; } ?>'>
+                    <a class='nav-link' href='<?php echo $url; ?>/user'>สมาชิก (<?php echo $username; ?>)</a>
                 </li>
 
 
-                <li class='nav-item '>
-                    <a class='nav-link' href='<?php echo $url; ?>/community'>ชุมชน</a>
+                <li class='nav-item <?php if($menu == "community"){ echo "active"; } ?>'>
+                    <a class='nav-link' href='<?php echo $url; ?>/community.html'>ชุมชน</a>
                 </li>
 
-                <li class='nav-item '>
-                    <a class='nav-link' href='<?php echo $url; ?>/meeting'>มีตติง</a>
+                <li class='nav-item <?php if($menu == "meeting"){ echo "active"; } ?>'>
+                    <a class='nav-link' href='<?php echo $url; ?>/meeting.html'>มีตติง</a>
                 </li>
 
 
-                <li class='nav-item '>
-                    <a class='nav-link' href='<?php echo $url; ?>/contact'>ติดต่อ</a>
+                <li class='nav-item <?php if($menu == "contact"){ echo "active"; } ?>'>
+                    <a class='nav-link' href='<?php echo $url; ?>/contact.html'>ติดต่อ</a>
                 </li>
 
             </ul>

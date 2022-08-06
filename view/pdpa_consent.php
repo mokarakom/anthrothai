@@ -1,5 +1,8 @@
 <?php
 require_once ("_header.php");
+if(!isset($url)){
+    die();
+}
 ?>
 <div class='col-12'>
     <div class="alert alert-warning">
