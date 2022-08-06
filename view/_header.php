@@ -31,24 +31,29 @@
         <div class='collapse navbar-collapse' id='navbarCollapse'>
             <ul class='navbar-nav mr-auto'>
                 <li class='nav-item active'>
-                    <a class='nav-link' href='index.html'>หน้าแรก</a>
+                    <a class='nav-link' href='<?php echo $url; ?>'>หน้าแรก</a>
                 </li>
 
                 <li class='nav-item '>
-                    <a class='nav-link' href='about.html'>เกี่ยวกับ</a>
+                    <a class='nav-link' href='<?php echo $url; ?>/about'>เกี่ยวกับ</a>
                 </li>
 
                 <li class='nav-item '>
-                    <a class='nav-link' href='community.html'>ชุมชน</a>
-                </li>
-
-                <li class='nav-item '>
-                    <a class='nav-link' href='meeting.html'>มีตติง</a>
+                    <a class='nav-link' href='<?php echo $url; ?>/user'>สมาชิก (บุคคลทั่วไป)</a>
                 </li>
 
 
                 <li class='nav-item '>
-                    <a class='nav-link' href='contact.html'>ติดต่อ</a>
+                    <a class='nav-link' href='<?php echo $url; ?>/community'>ชุมชน</a>
+                </li>
+
+                <li class='nav-item '>
+                    <a class='nav-link' href='<?php echo $url; ?>/meeting'>มีตติง</a>
+                </li>
+
+
+                <li class='nav-item '>
+                    <a class='nav-link' href='<?php echo $url; ?>/contact'>ติดต่อ</a>
                 </li>
 
             </ul>

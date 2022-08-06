@@ -37,7 +37,8 @@ if(isset($_SESSION['userLogin']) && $_SESSION['userLogin']){
 //start url zone
 if (count($urlRewrite) == 0) {
     //show home
-    echo "home";
+    require_once ("./view/home_page.php");
+    die();
 } elseif ($urlRewrite[0] == "login") {
     //TODO: check is user login ?
     if ($isLogin) {
@@ -120,6 +121,7 @@ if (count($urlRewrite) == 0) {
 } elseif ($isLogin && $urlRewrite[0] == "user") {
     if (!isset($urlRewrite[1])) {
         //user start
+        require_once("./view/user_page.php");
     } elseif ($urlRewrite[1] == "start") {
         //PDPA consent here!
         if($_POST){
@@ -127,15 +129,13 @@ if (count($urlRewrite) == 0) {
         }else {
             require_once("./view/pdpa_consent.php");
         }
-        die();
+
     }
+    die();
 } elseif ($urlRewrite[0] == "debug") {
     var_dump($_SERVER);
 } elseif ($urlRewrite[0] == "contact") {
     echo "contact";
 } else {
     echo "404";
-
-    var_dump($urlRewrite);
-    var_dump($_SERVER);
 }
