@@ -1,15 +1,21 @@
 <?php
-
-//for local dev
-$baseUrl = "/at/";
+if(!file_exists("env.php")){
+    die("env.php not found!");
+}
+require_once ("env.php");
+if(!isset($isLocalDev) || !isset($baseUrl)){
+    die("env.php is not correct");
+}
 
 //request URI
 $uri = $_SERVER['REQUEST_URI'];
 $query = $_SERVER['QUERY_STRING'];
 
-if($uri != "" && $baseUrl != ""){
+if($isLocalDev && $uri != "" && $baseUrl != ""){
     $uriDev = explode($baseUrl,$uri);
-    var_dump($uriDev);
+    $uri = $uriDev[1];
 }
 
-var_dump($_SERVER);
+//spilt URL
+$uriLevel = explode("/",$uri);
+var_dump($uriLevel);
